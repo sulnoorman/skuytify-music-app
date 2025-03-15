@@ -1,0 +1,63 @@
+@import 'tailwindcss/base';
+@import './base.css';
+/* Import the base Vue theme styles */
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer base {
+  :root {
+    --vt-c-white: #ffffff;
+    --vt-c-white-soft: #f8f8f8;
+    --vt-c-white-mute: #f2f2f2;
+
+    --vt-c-black: #181818;
+    --vt-c-black-soft: #222222;
+    --vt-c-black-mute: #282828;
+
+    --vt-c-indigo: #2c3e50;
+
+    --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
+    --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
+    --vt-c-divider-dark-1: rgba(84, 84, 84, 0.65);
+    --vt-c-divider-dark-2: rgba(84, 84, 84, 0.48);
+
+    --vt-c-text-light-1: var(--vt-c-indigo);
+    --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
+    --vt-c-text-dark-1: var(--vt-c-white);
+    --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
+    --vt-c-text-primary: hsla(160, 100%, 37%, 1);
+  }
+}
+
+
+/* #app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-weight: normal;
+} */
+
+a,
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+  padding: 3px;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+  }
+}
+
+/* Extra small devices (phones, 576px and down) */
+@media (max-width: 576px) {}
+
+/* Small devices (tablets, 577px and up) */
+@media (min-width: 577px) and (max-width: 768px) {}
+
+/* Medium devices (small laptops, 769px and up) */
+@media (min-width: 769px) and (max-width: 992px) {}
+
+@media (min-width: 993px) and (max-width: 1200px) {}
