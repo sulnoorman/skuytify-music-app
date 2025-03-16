@@ -1,15 +1,6 @@
-<template>
-    <div class="terminal-header">
-        <h4>{{ title }}</h4>
-        <ul class="shell-dots">
-            <li class="shell-dots-red"></li>
-            <li class="shell-dots-yellow"></li>
-            <li class="shell-dots-green"></li>
-        </ul>
-    </div>
-</template>
-
 <script>
+import Tooltip from '@/components/Tooltip.vue';
+
 export default {
     name: 'TerminalHeader',
     props: {
@@ -18,9 +9,25 @@ export default {
             type: String,
             default: 'Terminal v.1'
         },
-    }
+    },
+    emits: ['handleClose']
 }
 </script>
+
+<template>
+    <div class="terminal-header">
+        <h4>{{ title }}</h4>
+        <ul class="shell-dots">
+            <li class="shell-dots-green"></li>
+            <li class="shell-dots-yellow"></li>
+            <li class="shell-dots-red" @click="$emit('handleClose')">
+                <Tooltip title="Close">
+                    <div class="w-full h-full"></div>
+                </Tooltip>
+            </li>
+        </ul>
+    </div>
+</template>
 
 <style scoped>
 .terminal-header {
@@ -39,7 +46,7 @@ export default {
 .terminal-header ul.shell-dots {
     position: absolute;
     top: 5px;
-    left: 8px;
+    right: 8px;
     padding-left: 0;
     margin: 0;
 }
@@ -53,6 +60,7 @@ export default {
 }
 
 .terminal-header ul .shell-dots-red {
+    cursor: pointer;
     background-color: rgb(200, 48, 48);
 }
 

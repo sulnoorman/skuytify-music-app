@@ -4,7 +4,7 @@ import HomeView from '@/views/HomeView.vue'
 
 // define async component / lazy loaded component
 const ContactView = defineAsyncComponent(() => import('@/views/ContactView.vue'))
-const AboutView = defineAsyncComponent(() => import('@/views/AboutView/index.vue'))
+const AboutView = defineAsyncComponent(() => import('@/views/AboutView/riset.vue'))
 
 
 const router = createRouter({

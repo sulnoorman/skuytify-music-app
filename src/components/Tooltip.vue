@@ -3,10 +3,12 @@ import { computed } from 'vue';
 
 const props = defineProps({
     title: {
+        required: true,
         type: String,
         default: () => 'Tooltip title', // Default offset values
     },
     placement: {
+        required: false,
         type: String,
         default: () => 'top'
     }
